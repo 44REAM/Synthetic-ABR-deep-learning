@@ -1,0 +1,41 @@
+[project]
+name = "synthetic-abr-deep-learning"
+version = "1.0.0"
+description = "Code for 'Physiologically Informed Synthetic Auditory Brainstem Responses Enable Synthetic-to-Real Wave V Classification'"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+# Exact versions of the environment that produced the results in the paper
+dependencies = [
+    "braindecode==1.4.0",
+    "captum==0.9.0",
+    "matplotlib==3.10.8",
+    "numpy==2.4.4",
+    "pandas==3.0.2",
+    "pywavelets==1.10.0",
+    "scikit-learn==1.8.0",
+    "scipy==1.17.1",
+    "timm==1.0.30",
+    "torch==2.11.0",
+    "tqdm==4.67.3",
+    "wfdb==4.3.1",
+]
+
+[project.optional-dependencies]
+# Only for generating the synthetic datasets (src/synthetic_*.py, src/sensitivity_*.py):
+# needs MATLAB R2025a and AMT 1.6.0; not needed to rerun the experiments and analyses
+matlab = [
+    "matlabengine==25.1.*",
+]
+
+[tool.uv]
+package = false
+
+# CUDA 12.8 builds of PyTorch (torchvision is required by timm)
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }

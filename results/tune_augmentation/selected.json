@@ -1,0 +1,10 @@
+{
+  "roenne": {"shift_limit_ms": 3.0, "pink_noise_sigma": 0.1},
+  "verhulst": {"pink_noise_sigma": 0.2, "dc_shift_max": 0.1},
+  "gaussian": {"pink_noise_sigma": 0.4, "dc_shift_max": 0.5},
+  "gaussian_latency": {"shift_limit_ms": 1.0, "pink_noise_sigma": 0.4, "dc_shift_max": 0.5},
+  "simple_gaussian": {"shift_limit_ms": 1.0, "pink_noise_sigma": 0.2, "dc_shift_max": 0.5},
+  "wang": {"pink_noise_sigma": 0.1, "dc_shift_max": 0.2},
+  "southampton": {"pink_noise_sigma": 0.2, "dc_shift_max": 0.2},
+  "physionet": {"pink_noise_sigma": 0.1}
+}

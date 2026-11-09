@@ -1,0 +1,8 @@
+{
+  "roenne": {"pink_noise_sigma": 0.2, "noisy_validation": true},
+  "verhulst": {"pink_noise_sigma": 0.4, "noisy_validation": true},
+  "gaussian": {"pink_noise_sigma": 0.2, "noisy_validation": true},
+  "wang": {},
+  "southampton": {"shift_limit_ms": 7.0, "pink_noise_sigma": 0.1},
+  "physionet": {"shift_limit_ms": 7.0}
+}
